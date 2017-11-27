@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Map</title>
+
+		<link href="style.css" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300&subset=latin,cyrillic' rel='stylesheet'>
+
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet" />
+		<script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+		<script src="js.js"></script>
+
+		<script type="text/javascript">
+			var map,
+			    myIcon,
+			    marker;
+
+			DG.then(function() {
+				map = DG.map('map', {
+					center : [52.278, 77.001],
+					zoom : 12,
+
+					minZoom : 12,
+					maxZoom : 16
+				});
+
+				myIcon = DG.icon({
+					iconUrl : 'images/4.png',
+					iconSize : [35, 45]
+				});
+				marker1 = DG.marker([52.30748, 76.9249], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Памятник');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/4.png',
+					iconSize : [35, 45]
+				});
+				marker2 = DG.marker([52.2985, 76.918], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Памятник');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/5.png',
+					iconSize : [35, 45]
+				});
+				marker3 = DG.marker([52.3065, 76.9355], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Промышленность');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/5.png',
+					iconSize : [35, 45]
+				});
+				marker4 = DG.marker([52.30699, 76.985], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Промышленность');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/3.png',
+					iconSize : [35, 45]
+				});
+				marker5 = DG.marker([52.2970, 76.9273], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Место отдыха');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/2.png',
+					iconSize : [35, 45]
+				});
+				marker6 = DG.marker([52.2962, 76.9282], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Религиозное сооружение');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/1.png',
+					iconSize : [35, 45]
+				});
+				marker7 = DG.marker([52.2970, 76.9398], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Культурно-досуговое сооружение');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/3.png',
+					iconSize : [35, 45]
+				});
+				marker8 = DG.marker([52.2935, 76.9368], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Место отдыха');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/1.png',
+					iconSize : [35, 45]
+				});
+				marker9 = DG.marker([52.2933, 76.975], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Культурно-досуговое сооружение');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/4.png',
+					iconSize : [35, 45]
+				});
+				marker10 = DG.marker([52.2895, 76.9525], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Памятник');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/2.png',
+					iconSize : [35, 45]
+				});
+				marker11 = DG.marker([52.2902, 77.0074], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Религиозное сооружение');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/5.png',
+					iconSize : [35, 45]
+				});
+				marker12 = DG.marker([52.292, 77.0243], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Промышленность');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/3.png',
+					iconSize : [35, 45]
+				});
+				marker13 = DG.marker([52.286, 76.9368], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Место отдыха');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/4.png',
+					iconSize : [35, 45]
+				});
+				marker14 = DG.marker([52.2862, 76.9458], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Памятник');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/2.png',
+					iconSize : [35, 45]
+				});
+				marker15 = DG.marker([52.28665, 76.9621], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Религиозное сооружение');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/4.png',
+					iconSize : [35, 45]
+				});
+				marker16 = DG.marker([52.2873, 76.9748], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Памятник');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/1.png',
+					iconSize : [35, 45]
+				});
+				marker17 = DG.marker([52.2829, 76.9436], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Культурно-досуговое сооружение');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/2.png',
+					iconSize : [35, 45]
+				});
+				marker18 = DG.marker([52.2802, 76.9419], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Религиозное сооружение');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/1.png',
+					iconSize : [35, 45]
+				});
+				marker19 = DG.marker([52.276, 76.9385], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Культурно-досуговое сооружение');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/1.png',
+					iconSize : [35, 45]
+				});
+				marker20 = DG.marker([52.27375, 76.9379], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Культурно-досуговое сооружение');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/4.png',
+					iconSize : [35, 45]
+				});
+				marker21 = DG.marker([52.27898, 76.9658], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Памятник');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/1.png',
+					iconSize : [35, 45]
+				});
+				marker22 = DG.marker([52.276, 76.9902], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Культурно-досуговое сооружение');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/2.png',
+					iconSize : [35, 45]
+				});
+				marker23 = DG.marker([52.2745, 76.986], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Религиозное сооружение');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/3.png',
+					iconSize : [35, 45]
+				});
+				marker24 = DG.marker([52.27, 76.986], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Место отдыха');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/1.png',
+					iconSize : [35, 45]
+				});
+				marker25 = DG.marker([52.2668, 76.9712], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Культурно-досуговое сооружение');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/5.png',
+					iconSize : [35, 45]
+				});
+				marker26 = DG.marker([52.2685, 77.0115], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Промышленность');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/3.png',
+					iconSize : [35, 45]
+				});
+				marker27 = DG.marker([52.261, 76.9935], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Место отдыха');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/2.png',
+					iconSize : [35, 45]
+				});
+				marker28 = DG.marker([52.2563, 76.95218], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Религиозное сооружение');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/5.png',
+					iconSize : [35, 45]
+				});
+				marker29 = DG.marker([52.255, 76.948], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Промышленность');
+
+				myIcon = DG.icon({
+					iconUrl : 'images/4.png',
+					iconSize : [35, 45]
+				});
+				marker30 = DG.marker([52.2525, 76.9425], {
+					icon : myIcon
+				}).addTo(map).bindLabel('Памятник');
+
+				group = DG.featureGroup([marker1, marker2, marker3, marker4, marker5, marker6, marker7, marker8, marker9, marker10, marker11, marker12, marker13, marker14, marker15, marker16, marker17, marker18, marker19, marker20, marker21, marker22, marker23, marker24, marker25, marker26, marker27, marker28, marker29, marker30]);
+				group.addTo(map);
+				group.on('click', function(e) {
+					map.setView([e.latlng.lat, e.latlng.lng]);
+				});
+
+			});
+		</script>
+
+		<script type="text/javascript">
+			function clock() {
+				var d = new Date();
+				var month_num = d.getMonth()
+				var day = d.getDate();
+				var hours = d.getHours();
+				var minutes = d.getMinutes();
+				var seconds = d.getSeconds();
+
+				month = new Array(".01", ".02", ".03", ".04", ".05", ".06", ".07", ".08", ".09", ".10", ".11", ".12");
+
+				if (day <= 9)
+					day = "0" + day;
+				if (hours <= 9)
+					hours = "0" + hours;
+				if (minutes <= 9)
+					minutes = "0" + minutes;
+				if (seconds <= 9)
+					seconds = "0" + seconds;
+
+				date_time = day + "" + month[month_num] + "." + d.getFullYear() + " &nbsp;&nbsp;&nbsp; " + hours + ":" + minutes + ":" + seconds;
+				if (document.layers) {
+					document.layers.doc_time.document.write(date_time);
+					document.layers.doc_time.document.close();
+				} else
+					document.getElementById("doc_time").innerHTML = date_time;
+				setTimeout("clock()", 1000);
+			}
+		</script>
+
+	</head>
+	<body>
+
+		<div id="popup">
+			<div  >
+				
+				<a href="#" style="text-decoration: none;"><img style="width: 80px; height: 80px;"  src="images/image/01.png" />
+				<span style="color:white;font-size:60px;padding-left:20%;">
+				Қазақша
+				</span>
+				</a>
+				
+			</div>
+			<div  >
+				<a href="#" style="text-decoration: none;"><img style="width: 80px; height: 80px;"  src="images/image/02.png" />
+<span style="color:white;font-size:60px;padding-left:20%;">
+				English
+				</span>
+				</a>
+			</div>
+			<div  >
+				<a href="#" style="text-decoration: none;"><img style="width: 80px; height: 80px;"  src="images/image/03.png" />
+					<span style="color:white;font-size:60px;padding-left:20%;">
+				Русский
+				</span>
+				</a>
+			</div>
+			<div  >
+				<a href="#" style="text-decoration: none;"><img style="width: 80px; height: 80px;"  src="images/image/04.png" />
+					<span style="color:white;font-size:60px;padding-left:20%;">
+				КАЗАКША
+				</span>
+				</a>
+			</div>
+			<div  >
+				<a href="#" style="text-decoration: none;"><img style="width: 80px; height: 80px;"  src="images/image/05.png" />
+					<span style="color:white;font-size:60px;padding-left:20%;">
+				КАЗАКША
+				</span>
+				</a>
+			</div>
+			<div  >
+				<a href="#" style="text-decoration: none;"><img style="width: 80px; height: 80px;"  src="images/image/06.png" />
+					<span style="color:white;font-size:60px;padding-left:20%;">
+				КАЗАКША
+				</span>
+				</a>
+			</div>
+			<div  >
+				<a href="#" style="text-decoration: none;"><img style="width: 80px; height: 80px;"  src="images/image/07.png" />
+					<span style="color:white;font-size:60px;padding-left:20%;">
+				КАЗАКША
+				</span>
+				</a>
+			</div>
+		</div>
+
+		<input class="open" style="z-index: 1000;" id="top-box" type="checkbox" hidden >
+		<label class="btn" for="top-box"></label>
+		<div class="top-panel">
+			<div class="message">
+				<span style="font-size:20px;">Промышленность</span>
+				<br />
+				<br />
+				<br />
+				<span style="font-size:20px;">Памятники</span>
+				<br />
+				<br />
+				<br />
+				<span style="font-size:20px;">Религиозные
+					<br />
+					сооружения</span>
+				<br />
+				<br />
+				<span style="font-size:20px;">Места отдыха</span>
+				<br />
+				<br />
+				<br />
+				<span style="font-size:20px;">Кудьтурно-досуговые
+					<br />
+					сооружения</span>
+				<br />
+				<br />
+			</div>
+		</div>
+
+		<div class="row" style="background-color: #2d2d2d;">
+			<div class="col-lg-1">
+				<img style="padding-top: 9%;padding-left:5%;" src="images/image/12_1.png" />
+			</div>
+			<div class="col-lg-7">
+				<div class="col-lg-1" style="padding-top: 5px; padding-bottom: 5px;">
+					<a href="#" ><img  src="images/image/01.png" /></a>
+				</div>
+				<div class="col-lg-1" style="padding-top: 5px; padding-bottom: 5px;">
+					<a href="#" ><img src="images/image/02.png" /></a>
+				</div>
+				<div class="col-lg-1" style="padding-top: 5px; padding-bottom: 5px;">
+					<a href="#" ><img src="images/image/03.png" /></a>
+				</div>
+				<div class="col-lg-1" style="padding-top: 5px; padding-bottom: 5px;">
+					<a href="#" ><img src="images/image/04.png" /></a>
+				</div>
+				<div class="col-lg-1" style="padding-top: 5px; padding-bottom: 5px;">
+					<a href="#" ><img src="images/image/05.png" /></a>
+				</div>
+				<div class="col-lg-1" style="padding-top: 5px; padding-bottom: 5px;">
+					<a href="#" ><img src="images/image/06.png" /></a>
+				</div>
+				<div class="col-lg-1" style="padding-top: 5px; padding-bottom: 5px;">
+					<a href="#" ><img src="images/image/07.png" /></a>
+				</div>
+			</div>
+			<div>
+
+				<div class="col-lg-4" style="font-size: 50px;color: #c1c1c1; ">
+					<span id="doc_time"> Дата и время </span>
+					<script type="text/javascript">
+						clock();
+					</script>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="row col-lg-1" style="width:6%;height:916px;background-color:#2d2d2d;">
+				<div class="col-lg-3">
+
+					<div style="padding-top: 30px;padding-left: 11px;">
+						<a href="#"><img src="images/image/15.png" /></a>
+					</div>
+					<div style="padding-top: 20px;padding-left: 11px;">
+						<a href="#"><img src="images/image/16.png" /></a>
+					</div>
+					<div style="padding-top: 20px;padding-left: 11px;">
+						<a href="#"><img src="images/image/17.png" /></a>
+					</div>
+					<div style="padding-top: 20px;padding-left: 11px;">
+						<a href="#"><img src="images/image/18.png" /></a>
+					</div>
+					<div style="padding-top: 20px;padding-left: 11px;">
+						<a href="#"><img src="images/image/19.png" /></a>
+					</div>
+
+					<div style="padding-top: 200px;padding-left: 11px;">
+						<a href="#"><img src="images/image/5.png" /></a>
+					</div>
+					<div style="padding-top: 20px;padding-left: 11px;">
+						<a href="#"><img src="images/image/4.png" /></a>
+					</div>
+					<div style="padding-top: 20px;padding-left: 11px;">
+						<a href="#"><img src="images/image/2.png" /></a>
+					</div>
+					<div style="padding-top: 20px;padding-left: 11px;">
+						<a href="#"><img src="images/image/3.png" /></a>
+					</div>
+					<div style="padding-top: 20px;padding-left: 11px;">
+						<a href="#"><img src="images/image/1.png" /></a>
+					</div>
+					<div class="window">
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="col-lg-11" id="map" style="width: 1850px;float:center"></div>
+		</div>
+
+	</body>
+</html>
